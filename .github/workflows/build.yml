@@ -20,7 +20,8 @@ jobs:
 
     steps:
       - uses: actions/checkout@v5
-
+        with:
+          ref: 2.2.1.0
       - uses: pnpm/action-setup@v5
         with:
           version: 10.17.0
