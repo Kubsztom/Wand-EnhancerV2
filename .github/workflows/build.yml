@@ -36,6 +36,7 @@ jobs:
       - name: Build unsigned executable
         shell: pwsh
         run: |
+          Remove-Item web-panel/scripts/docs-refs.test.ts -ErrorAction SilentlyContinue
           if ('${{ inputs.enable_update_notifications }}' -eq 'true') {
             ./build.ps1 -Configuration Release -EnableUpdateNotifications
           } else {
